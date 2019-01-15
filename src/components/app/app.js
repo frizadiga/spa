@@ -30,8 +30,8 @@ const App = () => {
         <Router>
           <div>
             <Switch>
-              <Route path="/home" component={HomePage} exact/>
-              <Route path="/" component={LoginPage} exact/>
+              <Route path="/" component={HomePage} exact/>
+              <Route path="/login" component={LoginPage} exact/>
             </Switch>
             { false && <BottomBar /> }
           </div>
