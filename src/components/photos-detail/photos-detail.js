@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import './post.scss';
+import './photos-detail.scss';
 import Fetch from '../../lib/Fetch';
-import { Link } from 'react-router-dom';
 
-const Post = (props) => {
+const PhotosDetail = (props) => {
   const { id } = props;
   const [ data, setData ] = useState({});
 
   const fetchData = async () => {
-    const response = await Fetch(`/posts/${id}`)
+    const response = await Fetch(`/photos/${id}`)
     console.log(response)
     if (response.status === 200) setData(response.data)
   }
@@ -16,15 +15,15 @@ const Post = (props) => {
   useEffect(() => { console.log('now', props); fetchData(); }, {});
 
   return (
-    <div className="post">
-      Post {id} Detail
-      <div className="post__item"> 
+    <div className="photos-detail">
+      PhotosDetail {id} Detail
+      <div className="photos-detail__item">
+        <img src={data.thumbnailUrl} alt={data.title}/>
         <p>ID: {data.id}</p>
         <p>Title: {data.title}</p>
-        <p>Body: {data.body}</p>
       </div>
     </div>
   );
 }
 
-export default Post;
+export default PhotosDetail;

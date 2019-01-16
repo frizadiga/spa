@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './user.scss';
+import './users-detail.scss';
 import Fetch from '../../lib/Fetch';
-import { Link } from 'react-router-dom';
 
 const User = (props) => {
   const { id } = props;

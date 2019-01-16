@@ -1,7 +1,7 @@
-.albums {
-  .albums__item {
+.comments-list {
+  .comments-list__item {
     display: grid;
-    grid: auto / auto auto;
+    grid: auto / auto;
     grid-gap: 4px;
     padding: 8px;
     cursor: pointer;

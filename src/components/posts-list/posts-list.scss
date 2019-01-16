@@ -1,0 +1,9 @@
+.posts-list {
+  .posts-list__item {
+    display: grid;
+    grid: auto / auto auto;
+    grid-gap: 4px;
+    padding: 8px;
+    cursor: pointer;
+  }
+}

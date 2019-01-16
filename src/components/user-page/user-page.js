@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './user-page.scss';
-import User from '../user';
-import Posts from '../posts';
-import Albums from '../albums';
+import UsersDetail from '../users-detail';
+import PostsList from '../posts-list';
+import AlbumsList from '../albums-list';
 
 const UserPage = (props) => {
   const { match } = props;
@@ -11,9 +11,9 @@ const UserPage = (props) => {
   return (
     <div className="user-page">
       UserPage
-      <User id={userID} />
-      <Posts id={userID} />
-      <Albums id={userID} />
+      <UsersDetail id={userID} />
+      <PostsList id={userID} />
+      <AlbumsList id={userID} />
     </div>
   );
 }
