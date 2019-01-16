@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './app.scss';
 
 // Components
+import BottomBar from '../bottom-bar';
 import HomePage from '../home-page';
 import LoginPage from '../login-page';
-import BottomBar from '../bottom-bar';
+import UserPage from '../user-page';
+import PostPage from '../post-page';
 
 const App = () => {
   // const [ loading, setLoading ] = useState(true);
@@ -32,6 +34,8 @@ const App = () => {
             <Switch>
               <Route path="/" component={HomePage} exact/>
               <Route path="/login" component={LoginPage} exact/>
+              <Route path="/users/:id" component={UserPage} exact/>
+              <Route path="/posts/:id" component={PostPage} exact/>
             </Switch>
             { false && <BottomBar /> }
           </div>
