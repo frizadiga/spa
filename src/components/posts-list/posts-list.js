@@ -17,6 +17,7 @@ const PostsList = (props) => {
 
   return (
     <div className="posts-list">
+      Posts
       {data.map((item) => (
         <Link to={`/posts/${item.id}`} key={item.id}>
           <div className="posts-list__item"> 

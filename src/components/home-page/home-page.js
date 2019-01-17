@@ -1,12 +1,12 @@
 import React from 'react';
 import './home-page.scss';
-import Users from '../users'
+import UsersList from '../users-list'
 
 const HomePage = () => {
   return (
     <div className="home-page">
       HomePage
-      <Users />
+      <UsersList />
     </div>
   );
 }

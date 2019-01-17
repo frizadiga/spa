@@ -10,7 +10,6 @@ const UserPage = (props) => {
 
   return (
     <div className="user-page">
-      UserPage
       <UsersDetail id={userID} />
       <PostsList id={userID} />
       <AlbumsList id={userID} />

@@ -17,14 +17,12 @@ const PostsDetail = (props) => {
 
   return (
     <div className="posts-detail">
-      PostsDetail {id} Detail
-      <div className="posts-detail__item"> 
-        <p>ID: {data.id}</p>
+      <div className="posts-detail__item">
         <p>Title: {data.title}</p>
         <p>Body: {data.body}</p>
       </div>
       <div className="posts-detail__comments">
-        Comments List
+        Comments
         <CommentsList id={id} />  
       </div>
     </div>

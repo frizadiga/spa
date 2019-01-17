@@ -6,7 +6,6 @@ const PostsDetailPage = (props) => {
   const { match } = props;
   return (
     <div className="posts-detail-page">
-      PostsDetailPage
       <PostsDetail id={match.params.id} />
     </div>
   );

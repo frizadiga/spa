@@ -17,7 +17,7 @@ const Albums = (props) => {
 
   return (
     <div className="albums">
-      Albums List
+      Albums
       {data.map((item) => (
         <Link to={`/photos-list/${item.id}`} key={item.id}>
           <div className="albums__item"> 

@@ -15,17 +15,31 @@ const User = (props) => {
   useEffect(() => { console.log('now', props); fetchData(); }, {});
 
   return (
-    <div className="user">
-      User {id} Detail
-      <div className="user__item"> 
-        <p>ID: {data.id}</p>
+    <div className="users-detail">
+      <div className="users-detail__item"> 
+        <p>Id: {data.id}</p>
         <p>Name: {data.name}</p>
         <p>Username: {data.username}</p>
         <p>Email: {data.email}</p>
-        <p>Address: {JSON.stringify(data.address)}</p>
+        { data.address &&
+          <div className="users-detail__address">
+            Address: 
+            <p>Street: {data.address.street}</p>
+            <p>Suite: {data.address.suite}</p>
+            <p>City: {data.address.city}</p>
+            <p>Zip: {data.address.zipcode}</p>
+          </div>  
+        }
         <p>Phone: {data.phone}</p>
         <p>Website: {data.website}</p>
-        <p>Company: {JSON.stringify(data.company)}</p>
+        { data.company &&
+          <div className="users-detail__company">
+            Company: 
+            <p>Name: {data.company.name}</p>
+            <p>Catch Phrase: {data.company.catchPhrase}</p>
+            <p>Bs: {data.company.bs}</p>
+          </div>  
+        }
       </div>
     </div>
   );
