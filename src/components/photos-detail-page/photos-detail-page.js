@@ -6,7 +6,6 @@ const PhotosDetailPages = (props) => {
   const { match } = props;
   return (
     <div className="photos-detail-page">
-      PhotosDetailPages
       <PhotosDetail id={match.params.id} />
     </div>
   );

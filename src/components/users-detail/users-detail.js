@@ -16,8 +16,7 @@ const User = (props) => {
 
   return (
     <div className="users-detail">
-      <div className="users-detail__item"> 
-        <p>Id: {data.id}</p>
+      <div className="users-detail__item">
         <p>Name: {data.name}</p>
         <p>Username: {data.username}</p>
         <p>Email: {data.email}</p>

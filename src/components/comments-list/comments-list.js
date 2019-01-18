@@ -18,11 +18,9 @@ const CommentsList = (props) => {
     <div className="comments-list">
       {data.map((item) => (
         <div className="comments-list__item" key={item.id}>
-          <p>
-            <span>{item.name || '-'}</span>
-          </p>
+          <p className="comments-list__name">{item.name || '-'}</p>
           <p>{item.email || '-'}</p>
-          <p>{item.body || '-'}</p>
+          <p className="comments-list__body">"{item.body || '-'}"</p>
         </div>
       ))}
     </div>

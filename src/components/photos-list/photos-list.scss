@@ -1,10 +1,14 @@
-.post {
-  .post__item {
+.photos {
+  .photos__item {
     display: grid;
     grid: auto / auto;
     grid-gap: 4px;
     padding: 8px;
     cursor: pointer;
     p { margin: 0; }
+    img {
+      margin: auto;
+      width: 100%;
+    }
   }
 }

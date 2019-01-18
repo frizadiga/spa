@@ -27,7 +27,7 @@ const App = () => {
               <Route key="5" path="/photos-detail/:id" component={PhotosDetailPage} exact/>
               <Route key="0" component={NotFoundPage} />
             </Switch>
-            { false && <BottomBar /> }
+            { true && <BottomBar /> }
           </div>
         </Router>
       </main>

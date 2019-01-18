@@ -21,8 +21,7 @@ const PostsList = (props) => {
       {data.map((item) => (
         <Link to={`/posts/${item.id}`} key={item.id}>
           <div className="posts-list__item"> 
-            <span>{item.id || '-'}</span>
-            <span>{item.title || '-'}</span>
+            <span className="posts-list__title">{item.title || '-'}</span>
           </div>
         </Link>))
       }

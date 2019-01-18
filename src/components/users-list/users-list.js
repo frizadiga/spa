@@ -20,7 +20,6 @@ const UsersList = () => {
       {data.map((item) => (
         <Link to={`users/${item.id}`} key={item.id}>
           <div className="users-list__item"> 
-            <span>{item.id || '-'}</span>
             <span>{item.name || '-'}</span>
           </div>
         </Link>))

@@ -16,12 +16,11 @@ const Albums = (props) => {
   useEffect(() => { fetchData() }, []);
 
   return (
-    <div className="albums">
+    <div className="albums-list">
       Albums
       {data.map((item) => (
         <Link to={`/photos-list/${item.id}`} key={item.id}>
-          <div className="albums__item"> 
-            <span>{item.id || '-'}</span>
+          <div className="albums-list__item">
             <span>{item.title || '-'}</span>
           </div>
         </Link>))

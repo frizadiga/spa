@@ -1,9 +1,15 @@
 .posts-list {
+  padding: 8px;
   .posts-list__item {
     display: grid;
-    grid: auto / auto auto;
+    grid: auto / auto;
     grid-gap: 4px;
     padding: 8px;
     cursor: pointer;
+  }
+  .posts-list__title {
+    &::first-letter {
+      text-transform: uppercase;
+    }
   }
 }

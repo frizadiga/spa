@@ -7,4 +7,19 @@
     cursor: pointer;
     p { margin: 0; }
   }
+  .posts-detail__title {
+    font-size: 26px;
+    &::first-letter{
+      text-transform: uppercase;
+    }
+  }
+  .posts-detail__body {
+    font-size: 18px;
+    &::first-letter{
+      text-transform: uppercase;
+    }
+  }
+  .posts-detail__comments {
+    padding: 8px;
+  }
 }

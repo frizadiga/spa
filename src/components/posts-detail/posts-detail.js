@@ -18,8 +18,8 @@ const PostsDetail = (props) => {
   return (
     <div className="posts-detail">
       <div className="posts-detail__item">
-        <p>Title: {data.title}</p>
-        <p>Body: {data.body}</p>
+        <p className="posts-detail__title">{data.title}</p>
+        <p className="posts-detail__body">{data.body}.</p>
       </div>
       <div className="posts-detail__comments">
         Comments
