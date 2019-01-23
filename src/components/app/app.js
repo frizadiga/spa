@@ -16,7 +16,7 @@ const App = () => {
   return (
     <React.Fragment>
       <main className="app">
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <div>
             <Switch>
               <Route key="1" path="/" component={HomePage} exact/>
