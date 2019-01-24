@@ -16,8 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
-    "deploy": "gh-pages-clean && gh-pages -d build -b master",
-    "deploy:2": "push-dir --dir=build --branch=gh-pages --cleanup",
+    "deploy:backup": "gh-pages-clean && gh-pages -d build -b master",
+    "deploy": "push-dir --dir=build --branch=gh-pages --cleanup",
     "predeploy": "npm run build"
   },
   "eslintConfig": {
