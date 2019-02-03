@@ -1,0 +1,34 @@
+{
+  "name": "friza-spa",
+  "version": "0.1.0",
+  "homepage": "https://frizadiga.github.io/spa",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "firebase": "^5.7.3",
+    "react": "^16.8.0-alpha.1",
+    "react-dom": "^16.8.0-alpha.1",
+    "react-facebook-login": "^4.1.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && cp build/index.html build/404.html",
+    "test": "react-scripts test",
+    "deploy": "gh-pages-clean && gh-pages -d build -b master",
+    "predeploy": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.11.0"
+  }
+}

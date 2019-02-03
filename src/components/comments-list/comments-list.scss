@@ -1,0 +1,19 @@
+.comments-list {
+  .comments-list__item {
+    display: grid;
+    grid: auto / auto;
+    grid-gap: 4px;
+    padding: 8px;
+    cursor: pointer;
+    p { margin: 0; }
+  }
+  .comments-list__name {
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  .comments-list__body {
+    padding: 8px;
+    background-color: #eaeaea;
+  }
+}
