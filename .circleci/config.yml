@@ -3,13 +3,15 @@ jobs:
   build:
     branches:
       ignore:
-        - master
+        - dev
+        - gh-pages
     docker:
       - image: circleci/node:10
     working_directory: ~/frizadiga.github.io
     environment:
       - SOURCE_BRANCH: master
       - TARGET_BRANCH: gh-pages
+      - BUILD_FOLDER: build
     steps: 
       - checkout
       - restore_cache:
