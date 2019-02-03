@@ -29,7 +29,7 @@ const UsersList = () => {
           <div className="users-list__item">
             <img
               src={`https://via.placeholder.com/50?text=${getInitialName(item.name)}`}
-              alt={`${item.name} picture`}
+              alt={`${item.name}`}
             />
             <span>{item.name || '-'}</span>
           </div>
