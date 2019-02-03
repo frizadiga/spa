@@ -1,9 +1,21 @@
 .users-list {
+  .users-list__title {
+    padding-left: 8px;
+  }
   .users-list__item {
     display: grid;
-    grid: auto / auto auto;
-    grid-gap: 4px;
+    grid: auto / minmax(auto, 50px) auto;
+    align-items: center;
+    grid-gap: 8px;
     padding: 8px;
     cursor: pointer;
+    img {
+      width: 50px;
+      height: 50px;
+      min-width: 50px;
+      max-width: 50px;
+      background-color: #e3e3e3;
+      border-radius: 50%;
+    }
   }
 }

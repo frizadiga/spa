@@ -3,10 +3,10 @@
   background-color: #eee;
   color: #333;
   min-height: 100vh;
-<<<<<<< HEAD
-  box-shadow: 0 9px 3px 3px #f7f7f7;
-=======
   max-width: 1000px;
   margin: auto;
->>>>>>> bd31e889f7ab67432cec28876dca215db94ead54
+  box-shadow: 0 9px 3px 3px #f7f7f7;
+  .app__router-view {
+    padding-bottom: 50px;
+  }
 }
