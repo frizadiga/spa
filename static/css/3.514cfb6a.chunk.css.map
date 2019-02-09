@@ -1,0 +1,1 @@
+{"version":3,"sources":["/home/circleci/frizadiga.github.io/src/components/not-found-page/not-found-page.scss"],"names":[],"mappings":"AAAA,gBACE,YAAA,CACA,oBAAA,CACA,WAAA,CACA,gBAAiB","file":"3.514cfb6a.chunk.css","sourcesContent":[".not-found-page {\n  display: grid;\n  place-content: center;\n  padding: 8px;\n  min-height: 100vh;\n}"]}
