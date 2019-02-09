@@ -1,9 +1,9 @@
 import React from 'react';
-import './loader.scss';
+import './loading.scss';
 
-const Loader = () => {
+const Loading = () => {
   return (
-    <div className="loader">
+    <div className="loading">
       <h3>
         Loading...    
       </h3>
@@ -11,4 +11,4 @@ const Loader = () => {
   );
 }
 
-export default Loader;
+export default Loading;
