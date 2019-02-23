@@ -20,7 +20,7 @@ const App = () => {
       <main className="app">
         <Router basename={process.env.PUBLIC_URL}>
           <div className="app__router-view">
-            <React.Suspense fallback={Loading}>
+            <React.Suspense fallback={<Loading />}>
               <Switch>
                 <Route key="1" path="/" component={HomePage} exact/>
                 <Route key="2" path="/menu" component={Menu} exact/>
