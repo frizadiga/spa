@@ -12,7 +12,7 @@ const UsersList = () => {
     if (response.status === 200) setData(response.data)
   }
 
-  useEffect(() => { fetchData() }, []);
+  useEffect(() => { fetchData(); }, []);
 
   const getInitialName = (name) => {
     const nameSplit = name.split(' ');
