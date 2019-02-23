@@ -7,9 +7,9 @@ const UsersList = () => {
   const [ data, setData ] = useState([]);
 
   const fetchData = async () => {
-    const response = await Fetch('/users')
-    console.log(response)
-    if (response.status === 200) setData(response.data)
+    const response = await Fetch('/users');
+    // console.log(response)
+    if (response.status === 200) setData(response.data);
   }
 
   useEffect(() => { fetchData(); }, []);
