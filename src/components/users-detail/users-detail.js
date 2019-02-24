@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import { PropTypes as T } from 'prop-types';
 import './users-detail.scss';
 import Fetch from '../../lib/Fetch';
 
 const User = (props) => {
   const { id } = props;
-  const [ data, setData ] = useState({});
+  const [data, setData] = useState({});
 
   const fetchData = async () => {
-    const response = await Fetch(`/users/${id}`)
-    console.log(response)
-    if (response.status === 200) setData(response.data)
-  }
+    const response = await Fetch(`/users/${id}`);
+    // console.log(response);
+    if (response.status === 200) setData(response.data);
+  };
 
-  useEffect(() => { console.log('now', props); fetchData(); }, {});
+  useEffect(() => { fetchData(); }, {});
 
   return (
     <div className="users-detail">
@@ -20,28 +21,36 @@ const User = (props) => {
         <p>Name: {data.name}</p>
         <p>Username: {data.username}</p>
         <p>Email: {data.email}</p>
-        { data.address &&
+        { data.address
+          && (
           <div className="users-detail__address">
-            Address: 
+            Address:
             <p>Street: {data.address.street}</p>
             <p>Suite: {data.address.suite}</p>
             <p>City: {data.address.city}</p>
             <p>Zip: {data.address.zipcode}</p>
-          </div>  
+          </div>
+          )
         }
         <p>Phone: {data.phone}</p>
         <p>Website: {data.website}</p>
-        { data.company &&
+        { data.company
+          && (
           <div className="users-detail__company">
-            Company: 
+            Company:
             <p>Name: {data.company.name}</p>
             <p>Catch Phrase: {data.company.catchPhrase}</p>
             <p>Bs: {data.company.bs}</p>
-          </div>  
+          </div>
+          )
         }
       </div>
     </div>
   );
-}
+};
+
+User.propTypes = {
+  id: T.string.isRequired,
+};
 
 export default User;

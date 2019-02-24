@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { PropTypes as T } from 'prop-types';
 import './posts-detail.scss';
 import Fetch from '../../lib/Fetch';
 import CommentsList from '../comments-list';
 
 const PostsDetail = (props) => {
   const { id } = props;
-  const [ data, setData ] = useState({});
+  const [data, setData] = useState({});
 
   const fetchData = async () => {
-    const response = await Fetch(`/posts/${id}`)
-    console.log(response)
-    if (response.status === 200) setData(response.data)
-  }
+    const response = await Fetch(`/posts/${id}`);
+    // console.log(response);
+    if (response.status === 200) setData(response.data);
+  };
 
-  useEffect(() => { console.log('now', props); fetchData(); }, {});
+  useEffect(() => { fetchData(); }, {});
 
   return (
     <div className="posts-detail">
@@ -23,10 +24,14 @@ const PostsDetail = (props) => {
       </div>
       <div className="posts-detail__comments">
         Comments
-        <CommentsList id={id} />  
+        <CommentsList id={id} />
       </div>
     </div>
   );
-}
+};
+
+PostsDetail.propTypes = {
+  id: T.string.isRequired,
+};
 
 export default PostsDetail;

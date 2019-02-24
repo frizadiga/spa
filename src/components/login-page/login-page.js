@@ -2,17 +2,18 @@ import React from 'react';
 import './login-page.scss';
 // import FacebookLogin from 'react-facebook-login';
 
-const LoginPage = (props) => {
+const LoginPage = () => {
   const fnSubmit = (event) => {
-    event.preventDefault()
-    console.log('fnSubmit')
-  }
+    event.preventDefault();
+
+    // console.log('fnSubmit');
+  };
 
   const ButtonLogin = () => {
     return (
       <button>Login</button>
-    )
-  }
+    );
+  };
 
   return (
     <div className="login-page">
@@ -22,10 +23,10 @@ const LoginPage = (props) => {
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
           <ButtonLogin />
-        </form> 
+        </form>
       </div>
     </div>
   );
-}
+};
 
 export default LoginPage;

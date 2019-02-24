@@ -1,4 +1,5 @@
 import React from 'react';
+import { PropTypes as T } from 'prop-types';
 import './photos-detail-page.scss';
 import PhotosDetail from '../photos-detail';
 
@@ -9,6 +10,10 @@ const PhotosDetailPages = (props) => {
       <PhotosDetail id={match.params.id} />
     </div>
   );
-}
+};
+
+PhotosDetailPages.propTypes = {
+  match: T.object.isRequired,
+};
 
 export default PhotosDetailPages;
