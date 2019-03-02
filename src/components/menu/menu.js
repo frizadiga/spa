@@ -11,20 +11,20 @@ const menuList = [
     path: '/settings',
     text: 'Settings',
   },
-]
+];
 
 const Menu = () => {
   return (
     <div className="menu">
       {
-        !!menuList && menuList.map((item, i) => 
+        !!menuList && menuList.map((item, i) => (
           <Link to={item.path} key={i}>
             <div className="menu__item">{item.text}</div>
           </Link>
-        )
-      }    
+        ))
+      }
     </div>
   );
-}
+};
 
 export default Menu;
