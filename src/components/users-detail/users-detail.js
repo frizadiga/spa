@@ -13,7 +13,7 @@ const User = (props) => {
     if (response.status === 200) setData(response.data);
   };
 
-  useEffect(() => { fetchData(); }, {});
+  useEffect(() => { fetchData(); }, []);
 
   return (
     <div className="users-detail">
