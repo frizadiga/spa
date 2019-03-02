@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "firebase": "^5.8.4",
+    "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-router-dom": "^4.4.0-beta.6",
@@ -15,10 +16,21 @@
     "build": "react-scripts build && cp build/index.html build/404.html",
     "test": "react-scripts test",
     "deploy": "gh-pages-clean && gh-pages -d build -b gh-pages",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "friza",
+    "parser": "babel-eslint",
+    "globals": {
+      "it": true,
+      "document": true
+    },
+    "rules": {
+      "linebreak-style": "off",
+      "react/no-unescaped-entities": "off"
+    }
   },
   "browserslist": [
     ">0.2%",
@@ -27,6 +39,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "eslint-config-friza": "^1.1.0",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0"
   }

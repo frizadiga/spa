@@ -11,20 +11,20 @@ const menuList = [
     path: '/menu',
     text: 'Menu',
   },
-]
+];
 
 const BottomBar = () => {
   return (
     <div className="bottom-bar">
       {
-        !!menuList && menuList.map((item, i) => 
+        !!menuList && menuList.map((item, i) => (
           <Link to={item.path} key={i}>
             <div className="bottom-bar__item">{item.text}</div>
           </Link>
-        )
-      }    
+        ))
+      }
     </div>
   );
-}
+};
 
 export default BottomBar;
