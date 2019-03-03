@@ -13,7 +13,7 @@ const PhotoList = (props) => {
     if (response.status === 200) setData(response.data)
   }
 
-  useEffect(() => { console.log('now', props); fetchData(); }, []);
+  useEffect(() => { fetchData(); }, []);
 
   return (
     <div className="photos">
